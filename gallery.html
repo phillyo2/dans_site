@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Catamaran:100" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+<link rel="stylesheet" type="text/css" href="./css.css">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+<script src="./jquery.scrollTo.js"></script>
+
+<head>
+<title>Page Title</title>
+</head>
+<div id="gallery-lightbox">
+  <div class="pull-left direction-icon-container">
+    <h1 id="arrow-left"><</h1>
+  </div>
+
+  <div class="pull-right direction-icon-container">
+    <h1 id="arrow-right">></h1>
+  </div>
+  <div class="glb-content">
+
+  </div>
+  <a id="close-link">(Esc) Close</a>
+  <div class="glb-footer">
+
+  </div>
+</div>
+<body id="all" class="index-page">
+<div class="navbar-wrapper">
+  <div class="container">
+    <div class="navbar navbar-inverse">
+        <div class="navbar-collapse collapse">
+
+          <div id="title" class="pull-left">
+            <div class="top">
+              Benjamin
+            </div>
+            <div class="bottom">
+              Construction & Design
+            </div>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class=""><a href="./index.html">Home</a></li>
+            <li class="active"><a href="./gallery.html">Gallery</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Provided Services<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="./provided_services.html">All</a></li>
+                <li class="divider"></li>
+                <li><a href="provided_services.html#pools">Pools and Spas</a></li>
+                <li><a href="provided_services.html#kitchens">Outdoor Kitchens</a></li>
+                <li><a href="provided_services.html#fire">Outdoor Fireplace/Fire pit</a></li>
+                <li><a href="provided_services.html#walls">Retaining Walls</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="index.html#mission">Our Mission</a></li>
+                <li><a href="index.html#meet">Meet the Team</a></li>
+                <li><a href="index.html#serviceArea">Service area</a></li>
+                <li><a href="index.html#contact">Contact Info</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+    </div>
+  </div><!-- /container -->
+</div><!-- /navbar wrapper -->
+<div id="mainbody">
+
+<div class="container">
+    <div class="panel panel-default service-panel gallery-picker">
+
+      <div id='service-picker' class="panel-body">
+        <div class="row">
+          <div class="col-md-2 col-md-offset-1">
+            <a href="#pool-container">Pools and Spas</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#kitchen-container">Outdoor Kitchens</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#fire-container">Outdoor Fireplaces/pits</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#walls-container">Retaining Walls</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#other-container">Other</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id='loading' class="container">
+      <div class="spinner">
+        <i class="fi-photo"></i>
+      </div>
+  </div>
+  
+  <div id='pool-container' class="gc-container">
+    <div class="gallery-container">
+      <h1>Pools and Spas</h1>
+      <div  id='pool-gallery' class="gallery">
+
+      </div>
+    </div>
+    <div class="fadeout"></div>
+    <!--<div class="expand-gallery">
+        <a class="">Expand/Collapse</a>
+    </div>-->
+  </div>
+  <div id='kitchen-container' class="gc-container">
+    <div class="gallery-container">
+      <h1>Outdoor Kitchens</h1>
+      <div id='kitchen-gallery' class="gallery">
+
+      </div>
+    </div>
+    <div class="fadeout"></div>
+     <!--<div class="expand-gallery">
+        <a class="">Expand/Collapse</a>
+    </div>-->
+  </div>
+
+  <div id='fire-container' class="gc-container">
+    <div class="gallery-container">
+      <h1>Outdoor Fireplaces / Firepits</h1>
+      <div id='fire-gallery' class="gallery">
+
+      </div>
+    </div>
+    <div class="fadeout"></div>
+     <!--<div class="expand-gallery">
+        <a class="">Expand/Collapse</a>
+    </div>-->
+  </div> 
+
+  <div id='walls-container' class="gc-container">
+    <div class="gallery-container">
+      <h1>Retaining Walls</h1>
+      <div id='walls-gallery' class="gallery">
+
+      </div>
+    </div>
+    <div class="fadeout"></div>
+     <!--<div class="expand-gallery">
+        <a class="">Expand/Collapse</a>
+    </div>-->
+  </div>   
+
+  <div id='other-container' class="gc-container">
+    <div class="gallery-container">
+      <h1>Other miscellaneous work</h1>
+      <div id='other-gallery' class="gallery">
+
+      </div>
+    </div>
+    <div class="fadeout"></div>
+     <!--<div class="expand-gallery">
+        <a class="">Expand/Collapse</a>
+    </div>-->
+  </div>   
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  var poolPhotos = ["DSC_0203.jpg",  "DSC_0326.jpg",  "DSC_0457.jpg",  "DSC_0526.jpg",  "DSC_0563.jpg",  "DSC_0673.jpg",  "DSC_0690.jpg",  "DSC_0726.jpg",
+  "DSC_0209.jpg",  "DSC_0367.jpg",  "DSC_0462.jpg",  "DSC_0527.jpg",  "DSC_0564.jpg",  "DSC_0676.jpg",  "DSC_0694.jpg",  "DSC_0727.jpg",
+  "DSC_0237.jpg",  "DSC_0369.jpg",  "DSC_0469.jpg",  "DSC_0531.jpg",  "DSC_0566.jpg",  "DSC_0677.jpg",  "DSC_0703.jpg",  "photo2 (2).jpg",
+  "DSC_0255.jpg",  "DSC_0378.jpg",  "DSC_0471.jpg",  "DSC_0538.jpg",  "DSC_0595.jpg",  "DSC_0679.jpg",  "DSC_0704.jpg",  "photo3 (2).jpg",
+  "DSC_0281.jpg",  "DSC_0408.jpg",  "DSC_0475.jpg",  "DSC_0539.jpg",  "DSC_0599.jpg",  "DSC_0681.jpg",  "DSC_0705.jpg",  "photo6 (2).jpg",
+  "DSC_0284.jpg",  "DSC_0425.jpg",  "DSC_0478.jpg",  "DSC_0547.jpg",  "DSC_0602.jpg",  "DSC_0682.jpg",  "DSC_0712.jpg",  "photo7 (2).jpg",
+  "DSC_0303.jpg",  "DSC_0426.jpg",  "DSC_0483.jpg",  "DSC_0548.jpg",  "DSC_0604.jpg",  "DSC_0683.jpg",  "DSC_0713.jpg",
+  "DSC_0304.jpg",  "DSC_0439.jpg",  "DSC_0495.jpg",  "DSC_0550.jpg",  "DSC_0606.jpg",  "DSC_0684.jpg",  "DSC_0717.jpg",
+  "DSC_0306.jpg",  "DSC_0448.jpg",  "DSC_0522.jpg",  "DSC_0552.jpg",  "DSC_0617.jpg",  "DSC_0685.jpg",  "DSC_0719.jpg",
+  "DSC_0317.jpg",  "DSC_0455.jpg",  "DSC_0524.jpg",  "DSC_0561.jpg",  "DSC_0670.jpg",  "DSC_0687.jpg",  "DSC_0722.jpg"]
+
+  var kitchenPhotos = ["DSC_0266.jpg",  "DSC_0278.jpg",  "DSC_0309.jpg",  "DSC_0337.jpg",  "DSC_0347.jpg",
+  "DSC_0268.jpg",  "DSC_0307.jpg",  "DSC_0335.jpg",  "DSC_0341.jpg",  "DSC_0354.jpg"]
+
+  var fireplacePhotos = ["DSC_0091.jpg",  "DSC_0132.jpg",  "DSC_0211.jpg",  "DSC_0231.jpg",  "DSC_0270.jpg",  "DSC_0536.jpg",  "DSC_0610.jpg", "photo9 (2).jpg",
+  "DSC_0118.jpg",  "DSC_0149.jpg",  "DSC_0226.jpg",  "DSC_0261.jpg",  "DSC_0292.jpg",  "DSC_0574.jpg",  "photo10 (2).jpg",
+  "DSC_0120.jpg",  "DSC_0210.jpg",  "DSC_0230.jpg",  "DSC_0262.jpg",  "DSC_0379.jpg",  "DSC_0578.jpg",  "photo1 (2).jpg"]
+
+  var wallPhotos = ["DSC_0089.jpg",  "DSC_0095.jpg",  "DSC_0107.jpg",  "DSC_0113.jpg",  "DSC_0126.jpg",  "DSC_0144.jpg",  "DSC_0146.jpg",  "DSC_0459.jpg",
+  "DSC_0090.jpg",  "DSC_0106.jpg",  "DSC_0110.jpg",  "DSC_0115.jpg",  "DSC_0142.jpg",  "DSC_0145.jpg",  "DSC_0153.jpg"]
+
+  var otherPhotos = ["DSC_0223.jpg",  "DSC_0556.jpg",  "DSC_0581.jpg",  "photo11.jpg",  "photo14.jpg",  "photo17.jpg",  "photo3.jpg", "photo6.jpg",  "photo8.jpg",
+  "DSC_0232.jpg",  "DSC_0557.jpg",  "DSC_0692.jpg",  "photo12.jpg",  "photo15.jpg",  "photo1.jpg",  "photo4.jpg", "photo7.jpg", "photo9.jpg",
+  "DSC_0410.jpg",  "DSC_0579.jpg",  "photo10.jpg",   "photo13.jpg",  "photo16.jpg",  "photo2.jpg",  "photo5.jpg", "photo8 (2).jpg"]
+
+  var poolImages = preload.apply(this, poolPhotos.map(function(photo){return './photos/pools/' + photo}))
+  var kitchenImages = preload.apply(this, kitchenPhotos.map(function(photo){return './photos/kitchens/' + photo}))
+  var fireplaceImages = preload.apply(this, fireplacePhotos.map(function(photo){return './photos/fireplaces/' + photo}))
+  var wallImages = preload.apply(this, wallPhotos.map(function(photo){return './photos/walls/' + photo}))
+  var otherImages = preload.apply(this, otherPhotos.map(function(photo){return './photos/other/' + photo}))
+
+  var footerImages 
+  var currentIndex
+
+  $(window).on('load', function () {
+
+    // preload.apply(this, kitchenPhotos.map(function(photo){return './photos/kitchens/' + photo}))
+
+    generateGalleryHtml(document.getElementById('pool-gallery'), poolImages)
+    generateGalleryHtml(document.getElementById('kitchen-gallery'), kitchenImages)
+    generateGalleryHtml(document.getElementById('fire-gallery'), fireplaceImages)
+    generateGalleryHtml(document.getElementById('walls-gallery'), wallImages)
+    generateGalleryHtml(document.getElementById('other-gallery'), otherImages)
+
+    var $poolGallery = $('#pool-gallery').imagesLoaded( function() {
+
+      // setTimeout(function(){
+         $('#loading').hide()
+         $('#pool-container').show()
+         if(window.location.href.includes('#')){
+           window.location.href = window.location.href
+         }
+
+      //    $(window).trigger('resize')
+      // }, 500)
+      // init Masonry after all images have loaded
+      $poolGallery.masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+    });
+    var $kitchenGallery = $('#kitchen-gallery').imagesLoaded( function() {
+
+      // setTimeout(function(){
+         $('#loading').hide()
+         $('#kitchen-container').show()
+         if(window.location.href.includes('#')){
+           window.location.href = window.location.href
+         }
+      //    $(window).trigger('resize')
+      // }, 500)
+      // init Masonry after all images have loaded
+      $kitchenGallery.masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+    });
+
+    var $fireGallery = $('#fire-gallery').imagesLoaded( function() {
+
+      // setTimeout(function(){
+         $('#loading').hide()
+         $('#fire-container').show()
+         if(window.location.href.includes('#')){
+           window.location.href = window.location.href
+         }
+      //    $(window).trigger('resize')
+      // }, 500)
+      // init Masonry after all images have loaded
+      $fireGallery.masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+    });
+
+    var $wallsGallery = $('#walls-gallery').imagesLoaded( function() {
+
+      // setTimeout(function(){
+         $('#loading').hide()
+         $('#walls-container').show()
+         if(window.location.href.includes('#')){
+           window.location.href = window.location.href
+         }
+      //    $(window).trigger('resize')
+      // }, 500)
+      // init Masonry after all images have loaded
+      $wallsGallery.masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+    });
+
+    var $otherGallery = $('#other-gallery').imagesLoaded( function() {
+
+      // setTimeout(function(){
+         $('#loading').hide()
+         $('#other-container').show()
+         if(window.location.href.includes('#')){
+           window.location.href = window.location.href
+         }
+      //    $(window).trigger('resize')
+      // }, 500)
+      // init Masonry after all images have loaded
+      $otherGallery.masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+    });
+
+  });
+  
+
+  function preload() {  
+    var images = [];
+      for (var i = 0; i < arguments.length; i++) {
+          images[i] = new Image();
+          images[i].src = preload.arguments[i];
+      }
+      return images
+  }
+
+  function generateGalleryHtml(galleryEle, images){
+
+    // var galleryHtml = ""
+    var a
+    for (var i = 0; i < images.length; i++) {
+      a = document.createElement('a')
+      a.className = 'thumbnail'
+      a.onclick = function(e){
+          document.getElementById('close-link').onclick = function(){
+            $('#gallery-lightbox').fadeOut()
+          }
+          footerImages = generateLightboxFooterHtml(images, e.target)
+          updateCurrentIndex(images.indexOf(e.target))
+          var imgContainer = document.createElement('div')
+          imgContainer.style='height:100%;max-width:100%;text-align:center;display: flex;  align-items: center;  justify-content: center;'
+
+          var img = images[images.indexOf(e.target)].cloneNode(true)
+          img.style = 'max-height:100%;max-width:100%;border: solid white 10px;border-radius:5px;'
+
+          document.getElementById('arrow-right').onclick = function(){
+              var i = currentIndex + 1
+              var imgContainer = document.createElement('div')
+              imgContainer.style='height:100%;max-width:100%;text-align:center;display: flex;  align-items: center;  justify-content: center;'
+
+              var img = images[i].cloneNode(true)
+              img.style = 'max-height:100%;max-width:100%;border: solid white 10px;border-radius:5px;'
+
+              imgContainer.appendChild(img)
+              document.getElementsByClassName('glb-content')[0].innerHTML = imgContainer.outerHTML
+
+              scrollImageToMiddle(footerImages[i])
+              updateCurrentIndex(currentIndex + 1)
+            }
+            
+           document.getElementById('arrow-left').onclick = function(){
+              var i = currentIndex - 1
+              var imgContainer = document.createElement('div')
+              imgContainer.style='height:100%;max-width:100%;text-align:center;display: flex;  align-items: center;  justify-content: center;'
+
+              var img = images[i].cloneNode(true)
+              img.style = 'max-height:100%;max-width:100%;border: solid white 10px;border-radius:5px;'
+
+              imgContainer.appendChild(img)
+              document.getElementsByClassName('glb-content')[0].innerHTML = imgContainer.outerHTML
+
+              scrollImageToMiddle(footerImages[i])
+              updateCurrentIndex(currentIndex - 1)
+            }
+          
+
+          imgContainer.appendChild(img)
+          document.getElementsByClassName('glb-content')[0].innerHTML = imgContainer.outerHTML
+
+          $('#gallery-lightbox').fadeIn()
+
+             footerImages.forEach(function(img){
+            if(e.target.src === img.src){
+              var id = img.src.split('/')
+              id = id[id.length -1].replace(' ', '')
+               scrollImageToMiddle(img)
+            }
+          })
+        }
+      
+      a.appendChild(images[i])
+      galleryEle.appendChild(a)
+    }
+  }
+
+  function generateLightboxFooterHtml(images, focusedImage){
+
+    document.getElementsByClassName('glb-footer')[0].innerHTML = ''
+    var newImages = []
+    images.forEach(function(img) {
+      var newImg = img.cloneNode(true)
+      newImg.style='height: 80%; margin:10px;border: solid white 2.5px;border-radius:5px;'
+      var id = newImg.src.split('/')
+      id = id[id.length -1].replace(' ', '')
+      newImg.id = id
+      // newImg.className = 'light-active'
+      newImg.onclick = function(e){
+          updateCurrentIndex(newImages.indexOf(e.target))
+          var imgContainer = document.createElement('div')
+          imgContainer.style='height:100%;max-width:100%;text-align:center;display: flex;  align-items: center;  justify-content: center;'
+
+          var img = images[newImages.indexOf(e.target)].cloneNode(true)
+          img.style = 'max-height:100%;max-width:100%;border: solid white 10px;border-radius:5px;'
+
+          imgContainer.appendChild(img)
+
+          document.getElementsByClassName('glb-content')[0].innerHTML = imgContainer.outerHTML
+
+          scrollImageToMiddle(e.target)
+      }
+      newImages.push(newImg)
+    }, this);
+
+    newImages.forEach(function(img) {
+      var imgContainer = document.createElement('div')
+      imgContainer.style='height:100%;display:inline-block;'
+      imgContainer.appendChild(img)
+      document.getElementsByClassName('glb-footer')[0].appendChild(imgContainer)
+    }, this);
+
+    return newImages
+  }
+
+  function updateCurrentIndex(newIndex){
+    $(footerImages[currentIndex]).removeClass('light-active')
+    $(footerImages[newIndex]).addClass('light-active')
+
+    currentIndex = newIndex
+  }
+
+  function scrollImageToMiddle(img){
+    var imgRect = img.getBoundingClientRect()
+    var windowWidth = $('#all').width()
+    $('.glb-footer').scrollTo(img, {offset: {left: (-windowWidth/2) + (img.width/2)}, duration: 500})
+  }
+
+
+$( document ).on( 'keydown', function ( e ) {
+    if ( e.keyCode === 27 ) { // ESC
+        // footerImages.splice(0, footerImages.length)
+        $('#gallery-lightbox').fadeOut();
+    }
+});
+
+    // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+</script>
