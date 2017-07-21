@@ -263,7 +263,9 @@
         isFitWidth: true
       });
 
-
+    if(window.location.href.includes('#')){
+      window.location.href = window.location.href
+    }
 
     //  $('#all').imagesLoaded( function() { $(window).trigger('resize')})
 
