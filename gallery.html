@@ -112,11 +112,11 @@
     </div>
   </div>
 
-  <div id='loading' class="container">
+  <!--<div id='loading' class="container">
       <div class="spinner">
         <i class="fi-photo"></i>
       </div>
-  </div>
+  </div>-->
   
   <div id='pool-container' class="gc-container">
     <div class="gallery-container">
@@ -221,6 +221,7 @@
 
   var footerImages 
   var currentIndex
+  
 
   $(window).on('load', function () {
 
@@ -231,7 +232,7 @@
     generateGalleryHtml(document.getElementById('fire-gallery'), fireplaceImages)
     generateGalleryHtml(document.getElementById('walls-gallery'), wallImages)
     generateGalleryHtml(document.getElementById('other-gallery'), otherImages)
-    $('#loading').hide()
+    // $('#loading').hide()
     $('#pool-container').show()
     $('#kitchen-container').show()
     $('#fire-container').show()
