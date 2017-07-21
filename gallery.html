@@ -231,24 +231,25 @@
     generateGalleryHtml(document.getElementById('fire-gallery'), fireplaceImages)
     generateGalleryHtml(document.getElementById('walls-gallery'), wallImages)
     generateGalleryHtml(document.getElementById('other-gallery'), otherImages)
+    $('#pool-container').show()
 
-    var $poolGallery = $('#pool-gallery').imagesLoaded( function() {
+    // var $poolGallery = $('#pool-gallery').imagesLoaded( function() {
 
-      // setTimeout(function(){
-         $('#loading').hide()
-         $('#pool-container').show()
-         if(window.location.href.includes('#')){
-           window.location.href = window.location.href
-         }
+    //   // setTimeout(function(){
+    //      $('#loading').hide()
+    //      $('#pool-container').show()
+    //      if(window.location.href.includes('#')){
+    //        window.location.href = window.location.href
+    //      }
 
-      //    $(window).trigger('resize')
-      // }, 500)
-      // init Masonry after all images have loaded
-      $poolGallery.masonry({
-        itemSelector: '.thumbnail',
-        isFitWidth: true
-      });
-    });
+    //   //    $(window).trigger('resize')
+    //   // }, 500)
+    //   // init Masonry after all images have loaded
+    //   $poolGallery.masonry({
+    //     itemSelector: '.thumbnail',
+    //     isFitWidth: true
+    //   });
+    // });
     var $kitchenGallery = $('#kitchen-gallery').imagesLoaded( function() {
 
       // setTimeout(function(){
