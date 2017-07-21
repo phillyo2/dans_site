@@ -237,7 +237,34 @@
     $('#fire-container').show()
     $('#walls-container').show()
     $('#other-container').show()
+    // $(window).trigger('resize')
 
+    $('#pool-gallery').masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+
+    $('#kitchen-gallery').masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+
+    $('#fire-gallery').masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+    $('#walls-gallery').masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+    $('#other-gallery').masonry({
+        itemSelector: '.thumbnail',
+        isFitWidth: true
+      });
+
+
+
+    //  $('#all').imagesLoaded( function() { $(window).trigger('resize')})
 
 
   //   // var $poolGallery = $('#pool-gallery').imagesLoaded( function() {
