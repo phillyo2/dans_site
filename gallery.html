@@ -231,92 +231,99 @@
     generateGalleryHtml(document.getElementById('fire-gallery'), fireplaceImages)
     generateGalleryHtml(document.getElementById('walls-gallery'), wallImages)
     generateGalleryHtml(document.getElementById('other-gallery'), otherImages)
+    $('#loading').hide()
     $('#pool-container').show()
+    $('#kitchen-container').show()
+    $('#fire-container').show()
+    $('#walls-container').show()
+    $('#other-container').show()
 
-    // var $poolGallery = $('#pool-gallery').imagesLoaded( function() {
 
-    //   // setTimeout(function(){
-    //      $('#loading').hide()
-    //      $('#pool-container').show()
-    //      if(window.location.href.includes('#')){
-    //        window.location.href = window.location.href
-    //      }
 
-    //   //    $(window).trigger('resize')
-    //   // }, 500)
-    //   // init Masonry after all images have loaded
-    //   $poolGallery.masonry({
-    //     itemSelector: '.thumbnail',
-    //     isFitWidth: true
-    //   });
-    // });
-    var $kitchenGallery = $('#kitchen-gallery').imagesLoaded( function() {
+  //   // var $poolGallery = $('#pool-gallery').imagesLoaded( function() {
 
-      // setTimeout(function(){
-         $('#loading').hide()
-         $('#kitchen-container').show()
-         if(window.location.href.includes('#')){
-           window.location.href = window.location.href
-         }
-      //    $(window).trigger('resize')
-      // }, 500)
-      // init Masonry after all images have loaded
-      $kitchenGallery.masonry({
-        itemSelector: '.thumbnail',
-        isFitWidth: true
-      });
-    });
+  //   //   // setTimeout(function(){
+  //   //      $('#loading').hide()
+  //   //      $('#pool-container').show()
+  //   //      if(window.location.href.includes('#')){
+  //   //        window.location.href = window.location.href
+  //   //      }
 
-    var $fireGallery = $('#fire-gallery').imagesLoaded( function() {
+  //   //   //    $(window).trigger('resize')
+  //   //   // }, 500)
+  //   //   // init Masonry after all images have loaded
+  //   //   $poolGallery.masonry({
+  //   //     itemSelector: '.thumbnail',
+  //   //     isFitWidth: true
+  //   //   });
+  //   // });
+  //   var $kitchenGallery = $('#kitchen-gallery').imagesLoaded( function() {
 
-      // setTimeout(function(){
-         $('#loading').hide()
-         $('#fire-container').show()
-         if(window.location.href.includes('#')){
-           window.location.href = window.location.href
-         }
-      //    $(window).trigger('resize')
-      // }, 500)
-      // init Masonry after all images have loaded
-      $fireGallery.masonry({
-        itemSelector: '.thumbnail',
-        isFitWidth: true
-      });
-    });
+  //     // setTimeout(function(){
+  //        $('#loading').hide()
+  //        $('#kitchen-container').show()
+  //        if(window.location.href.includes('#')){
+  //          window.location.href = window.location.href
+  //        }
+  //     //    $(window).trigger('resize')
+  //     // }, 500)
+  //     // init Masonry after all images have loaded
+  //     $kitchenGallery.masonry({
+  //       itemSelector: '.thumbnail',
+  //       isFitWidth: true
+  //     });
+  //   });
 
-    var $wallsGallery = $('#walls-gallery').imagesLoaded( function() {
+  //   var $fireGallery = $('#fire-gallery').imagesLoaded( function() {
 
-      // setTimeout(function(){
-         $('#loading').hide()
-         $('#walls-container').show()
-         if(window.location.href.includes('#')){
-           window.location.href = window.location.href
-         }
-      //    $(window).trigger('resize')
-      // }, 500)
-      // init Masonry after all images have loaded
-      $wallsGallery.masonry({
-        itemSelector: '.thumbnail',
-        isFitWidth: true
-      });
-    });
+  //     // setTimeout(function(){
+  //        $('#loading').hide()
+  //        $('#fire-container').show()
+  //        if(window.location.href.includes('#')){
+  //          window.location.href = window.location.href
+  //        }
+  //     //    $(window).trigger('resize')
+  //     // }, 500)
+  //     // init Masonry after all images have loaded
+  //     $fireGallery.masonry({
+  //       itemSelector: '.thumbnail',
+  //       isFitWidth: true
+  //     });
+  //   });
 
-    var $otherGallery = $('#other-gallery').imagesLoaded( function() {
+  //   var $wallsGallery = $('#walls-gallery').imagesLoaded( function() {
 
-      // setTimeout(function(){
-         $('#loading').hide()
-         $('#other-container').show()
-         if(window.location.href.includes('#')){
-           window.location.href = window.location.href
-         }
-      //    $(window).trigger('resize')
-      // }, 500)
-      // init Masonry after all images have loaded
-      $otherGallery.masonry({
-        itemSelector: '.thumbnail',
-        isFitWidth: true
-      });
-    });
+  //     // setTimeout(function(){
+  //        $('#loading').hide()
+  //        $('#walls-container').show()
+  //        if(window.location.href.includes('#')){
+  //          window.location.href = window.location.href
+  //        }
+  //     //    $(window).trigger('resize')
+  //     // }, 500)
+  //     // init Masonry after all images have loaded
+  //     $wallsGallery.masonry({
+  //       itemSelector: '.thumbnail',
+  //       isFitWidth: true
+  //     });
+  //   });
+
+  //   var $otherGallery = $('#other-gallery').imagesLoaded( function() {
+
+  //     // setTimeout(function(){
+  //        $('#loading').hide()
+  //        $('#other-container').show()
+  //        if(window.location.href.includes('#')){
+  //          window.location.href = window.location.href
+  //        }
+  //     //    $(window).trigger('resize')
+  //     // }, 500)
+  //     // init Masonry after all images have loaded
+  //     $otherGallery.masonry({
+  //       itemSelector: '.thumbnail',
+  //       isFitWidth: true
+  //     });
+  //   });
 
   });
   
